@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98B1379B-6847-4179-90BE-2EADC53D22D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cloud_Based_Hospital_Management</RootNamespace>
+    <AssemblyName>Cloud Based Hospital Management</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Graphicloads-Medical-Health-Hospital.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ftplib">
+      <HintPath>C:\Users\Rahul\Desktop\ftplib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Neurotec.Biometrics.Nffv">
+      <HintPath>C:\Users\Rahul\Desktop\FreeFingerprintVerificationSDK\bin\Win32_x86\Neurotec.Biometrics.Nffv.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.DomainServices.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.ServiceModel.DomainServices.Server, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addAppoinment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addAppoinment.Designer.cs">
+      <DependentUpon>addAppoinment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="appo_Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appo_Viewer.Designer.cs">
+      <DependentUpon>appo_Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cloud_Database_FTP.cs" />
+    <Compile Include="Component1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component1.Designer.cs">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="craeteBill_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="craeteBill_frm.Designer.cs">
+      <DependentUpon>craeteBill_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_view_record_scan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_view_record_scan.Designer.cs">
+      <DependentUpon>frm_view_record_scan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_view_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_view_report.Designer.cs">
+      <DependentUpon>frm_view_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ftp.cs" />
+    <Compile Include="getPatientDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="getPatientDetails.Designer.cs">
+      <DependentUpon>getPatientDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="import_lab_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="import_lab_1.Designer.cs">
+      <DependentUpon>import_lab_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="import_lab_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="import_lab_report.Designer.cs">
+      <DependentUpon>import_lab_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Import_Scan_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Import_Scan_Report.Designer.cs">
+      <DependentUpon>Import_Scan_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prescription.Designer.cs">
+      <DependentUpon>Prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="selectDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selectDoctor.Designer.cs">
+      <DependentUpon>selectDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="selectDr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="selectDr.Designer.cs">
+      <DependentUpon>selectDr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash_Screen.Designer.cs">
+      <DependentUpon>Splash_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userDetails.Designer.cs">
+      <DependentUpon>userDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addAppoinment.resx">
+      <DependentUpon>addAppoinment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appo_Viewer.resx">
+      <DependentUpon>appo_Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Component1.resx">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="craeteBill_frm.resx">
+      <DependentUpon>craeteBill_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_view_record_scan.resx">
+      <DependentUpon>frm_view_record_scan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_view_report.resx">
+      <DependentUpon>frm_view_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="getPatientDetails.resx">
+      <DependentUpon>getPatientDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="import_lab_1.resx">
+      <DependentUpon>import_lab_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="import_lab_report.resx">
+      <DependentUpon>import_lab_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import_Scan_Report.resx">
+      <DependentUpon>Import_Scan_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prescription.resx">
+      <DependentUpon>Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="selectDoctor.resx">
+      <DependentUpon>selectDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="selectDr.resx">
+      <DependentUpon>selectDr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash_Screen.resx">
+      <DependentUpon>Splash_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userDetails.resx">
+      <DependentUpon>userDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medical_Large.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1427065424_678077-computer-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45802.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\63978.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66993.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3716.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Graphicloads-Medical-Health-Hospital.ico" />
+    <None Include="Resources\splash1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

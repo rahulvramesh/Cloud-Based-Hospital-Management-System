@@ -1,0 +1,30 @@
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\bin\Debug\Cloud Based Hospital Management.exe
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\bin\Debug\Cloud Based Hospital Management.pdb
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud Based Hospital Management.csprojResolveAssemblyReference.cache
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.Form1.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.Properties.Resources.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud Based Hospital Management.csproj.GenerateResource.Cache
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud Based Hospital Management.exe
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud Based Hospital Management.pdb
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.Form2.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.Component1.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.newUser_frm.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.userDetails.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.addAppoinment.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\bin\Debug\MySql.Data.dll
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\bin\Debug\ftplib.pdb
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.getuserdetails.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.import_lab_1.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.Prescription.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.selectDr.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.AboutBox1.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.import_lab_report.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.Import_Scan_Report.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.Contact.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.craeteBill_frm.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.selectDoctor.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\bin\Debug\Neurotec.Biometrics.Nffv.dll
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.appo_view_new.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.frm_view_record_scan.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.frm_view_report.resources
+J:\Android_Works\WhatsUP\Cloud Based Hospital Management\Cloud Based Hospital Management\obj\Debug\Cloud_Based_Hospital_Management.Splash_Screen.resources

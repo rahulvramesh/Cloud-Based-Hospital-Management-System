@@ -1,0 +1,1488 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Neurotec.Biometrics.Nffv</name>
+    </assembly>
+    <members>
+        <member name="T:Neurotec.NDisposable">
+            <summary>
+            Provides a method to release allocated resources.
+            </summary>                                       
+        </member>
+        <member name="M:Neurotec.NDisposable.Check">
+            <summary>
+            Checks whether allocated resources were not released
+            previously.
+            </summary>
+            <exception cref="T:System.ObjectDisposedException">This exception is
+                                                      thrown when
+                                                      allocated
+                                                      resources were
+                                                      released
+                                                      previously.</exception>
+        </member>
+        <member name="M:Neurotec.NDisposable.Dispose(System.Boolean)">
+            <summary>
+            Performs tasks associated with freeing, releasing, or
+            resetting unmanaged resources.
+            </summary>
+            <remarks>
+            This method is used to close or release unmanaged resources.
+            By convention, this method is used for all tasks associated
+            with freeing resources held by an object.
+            </remarks>                                                  
+        </member>
+        <member name="M:Neurotec.NDisposable.Dispose">
+            <summary>
+            Performs tasks associated with freeing, releasing, or
+            resetting unmanaged resources.
+            </summary>
+            <remarks>
+            This method is used to close or release unmanaged resources.
+            By convention, this method is used for all tasks associated
+            with freeing resources held by an object.
+            </remarks>                                                  
+        </member>
+        <member name="P:Neurotec.NDisposable.IsDisposed">
+            <summary>
+            Gets whether allocated resources were released previously.
+            </summary>                                                
+        </member>
+        <member name="T:Neurotec.Biometrics.NffvUser">
+            <summary>
+            Provides methods and properties for working with users. 
+            </summary>                                              
+        </member>
+        <member name="M:Neurotec.Biometrics.NffvUser.GetHBitmap">
+            <summary>
+            \Returns a handle to the bitmap of the last scanned
+            fingerprint.
+            </summary>
+            <returns>
+            A pointer to Bitmap object.
+            </returns>                                         
+        </member>
+        <member name="M:Neurotec.Biometrics.NffvUser.GetBitmap">
+            <summary>
+            \Returns the bitmap of the last scanned fingerprint.
+            </summary>
+            <returns>
+            A Bitmap object.
+            </returns>                                          
+        </member>
+        <member name="T:Neurotec.NLibraryGetInfo">
+            <summary>
+            This delegate supports internal Neurotechnology libraries infrastructure and should not be used directly in your code.
+            </summary>
+        </member>
+        <member name="T:Neurotec.INeurotecException">
+            <summary>
+            The interface that contains information about Neurotec
+            \exceptions.
+            </summary>                                            
+        </member>
+        <member name="P:Neurotec.INeurotecException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.INeurotecException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.INeurotecException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NException">
+            <summary>
+            Represents errors that occur during execution of
+            Neurotechnology methods.
+            </summary>                                      
+        </member>
+        <member name="M:Neurotec.NException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NException class with a
+            specified error message, a call stack message and a reference
+            to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+            <remarks>
+            The NException class is the base class for all exceptions.
+            Once thrown, an exception should be handled by the
+            application or by the default exception handler.
+            </remarks>                                                    
+        </member>
+        <member name="M:Neurotec.NException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NSystemException">
+            <summary>
+            Defines the base class for predefined exceptions in the .NET
+            System namespace.
+            </summary>                                                  
+        </member>
+        <member name="M:Neurotec.NSystemException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NSystemException class with
+            a specified error message, a call stack message and a
+            reference to the inner exception that is the cause of this
+            exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NSystemException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NSystemException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NSystemException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NSystemException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NSystemException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NNullReferenceException">
+            <summary>
+            The exception that is thrown when there is an attempt to use
+            a null object reference.
+            </summary>                                                  
+        </member>
+        <member name="M:Neurotec.NNullReferenceException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NNullReferenceException
+            class with a specified error message, a call stack message
+            and a reference to the inner exception that is the cause of
+            this exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NNullReferenceException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NNullReferenceException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NNullReferenceException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NNullReferenceException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NNullReferenceException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NOutOfMemoryException">
+            <summary>
+            The exception that is thrown when there is not enough memory
+            for usage.
+            </summary>                                                  
+        </member>
+        <member name="M:Neurotec.NOutOfMemoryException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NNotImplementedException
+            class with a specified error message, a call stack message
+            and a reference to the inner exception that is the cause of
+            this exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NOutOfMemoryException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NOutOfMemoryException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NOutOfMemoryException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NOutOfMemoryException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NOutOfMemoryException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NNotImplementedException">
+            <summary>
+            The exception that is thrown when a requested method from
+            Neurotechnology library is not implemented.
+            </summary>                                               
+        </member>
+        <member name="M:Neurotec.NNotImplementedException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NNotImplementedException
+            class with a specified error message, a call stack message
+            and a reference to the inner exception that is the cause of
+            this exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NNotImplementedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NNotImplementedException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NNotImplementedException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NNotImplementedException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NNotImplementedException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NNotSupportedException">
+            <summary>
+            The exception that is thrown when an invoked method is not
+            supported.
+            </summary>                                                
+        </member>
+        <member name="M:Neurotec.NNotSupportedException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NNotSupportedException
+            class with a specified error message, a call stack message
+            and a reference to the inner exception that is the cause of
+            this exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NNotSupportedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NNotSupportedException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NNotSupportedException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NNotSupportedException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NNotSupportedException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NInvalidOperationException">
+            <summary>
+            The exception that is thrown when a method call is invalid
+            for the object's current state.
+            </summary>                                                
+        </member>
+        <member name="M:Neurotec.NInvalidOperationException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NInvalidOperationException
+            class with a specified error message, a call stack message
+            and a reference to the inner exception that is the cause of
+            this exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NInvalidOperationException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NInvalidOperationException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NInvalidOperationException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NInvalidOperationException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NInvalidOperationException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NOverflowException">
+            <summary>
+            The exception that is thrown when the result of an
+            arithmetic, casting, or conversion operation has overflowed.
+            </summary>                                                  
+        </member>
+        <member name="M:Neurotec.NOverflowException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NOverflowException class
+            with a specified error message, a call stack message and a
+            reference to the inner exception that is the cause of this
+            exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NOverflowException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NOverflowException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NOverflowException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NOverflowException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NOverflowException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NArgumentException">
+            <summary>
+            The exception that is thrown when one of the arguments
+            provided to a Neurotechnology method is not valid.
+            </summary>
+            <remarks>
+            NArgumentException is thrown when a method from one of
+            Neurotechnology library is invoked and at least one of the
+            passed arguments does not meet the parameter specification of
+            the called method.
+            </remarks>                                                   
+        </member>
+        <member name="M:Neurotec.NArgumentException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NArgumentException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the call stack.
+            </value>                                                    
+        </member>
+        <member name="P:Neurotec.NArgumentException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>
+            <value>
+            Gets an error code.
+            </value>                                    
+        </member>
+        <member name="P:Neurotec.NArgumentException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the unmanaged
+            stack.
+            </value>                                                   
+        </member>
+        <member name="P:Neurotec.NArgumentException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the managed
+            stack.
+            </value>                                                 
+        </member>
+        <member name="T:Neurotec.NArgumentNullException">
+            <summary>
+            The class that describes the exception that is thrown when a
+            null reference is passed to a method that does not accept it
+            as an argument.
+            </summary>
+            <remarks>
+            <para>
+            NArgumentNullException is thrown when a method is invoked and
+            at least one of the passed arguments is null but should not
+            be null.
+            </para>
+            <para>
+            ArgumentNullException behaves identically to
+            NArgumentException.
+            </para>
+            </remarks>                                                   
+        </member>
+        <member name="M:Neurotec.NArgumentNullException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NArgumentNullException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the call stack.
+            </value>                                                    
+        </member>
+        <member name="P:Neurotec.NArgumentNullException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>
+            <value>
+            Gets an error code. 
+            </value>                                    
+        </member>
+        <member name="P:Neurotec.NArgumentNullException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the unmanaged
+            stack.
+            </value>                                                   
+        </member>
+        <member name="P:Neurotec.NArgumentNullException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the managed
+            stack.
+            </value>                                                 
+        </member>
+        <member name="T:Neurotec.NArgumentOutOfRangeException">
+            <summary>
+            The class that describes the exception that is thrown when
+            the value of an argument passes to a method is outside the
+            allowable range.
+            </summary>
+            <remarks>
+            NArgumentOutOfRangeException is thrown when at least one of
+            the arguments passed to one of the Neurotechnology method is
+            not null reference and does not contain a valid value.
+            </remarks>                                                  
+        </member>
+        <member name="M:Neurotec.NArgumentOutOfRangeException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NArgumentOutOfRangeException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the call stack.
+            </value>                                                    
+        </member>
+        <member name="P:Neurotec.NArgumentOutOfRangeException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>
+            <value>
+            Gets an error code. 
+            </value>                                    
+        </member>
+        <member name="P:Neurotec.NArgumentOutOfRangeException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the unmanaged
+            stack.
+            </value>                                                   
+        </member>
+        <member name="P:Neurotec.NArgumentOutOfRangeException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the managed
+            stack.
+            </value>                                                 
+        </member>
+        <member name="T:Neurotec.NFormatException">
+            <summary>
+            The exception that is thrown when the format of an argument
+            does not meet the parameter specifications of the invoked
+            method.
+            </summary>                                                 
+        </member>
+        <member name="M:Neurotec.NFormatException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NFormatException class with
+            a specified error message, a call stack message and a
+            reference to the inner exception that is the cause of this
+            exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NFormatException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NFormatException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NFormatException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NFormatException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NFormatException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NIOException">
+            <summary>
+            The exception that is thrown when an I/O error occurs.
+            </summary>
+            <remarks>
+            NIOException is the base class for exceptions thrown while
+            accessing information using streams, files and directories.
+            </remarks>                                                 
+        </member>
+        <member name="M:Neurotec.NIOException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NIOException class with a
+            specified error message, a call stack message and a reference
+            to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NIOException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NIOException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NIOException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NIOException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NIOException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="T:Neurotec.NEndOfStreamException">
+            <summary>
+            The exception that is thrown when reading is attempted past
+            the end of a stream.
+            </summary>                                                 
+        </member>
+        <member name="M:Neurotec.NEndOfStreamException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NEndOfStreamException class
+            with a specified error message, a call stack message and a
+            reference to the inner exception that is the cause of this
+            exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="M:Neurotec.NEndOfStreamException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NEndOfStreamException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the call stack.
+            </value>                                                    
+        </member>
+        <member name="P:Neurotec.NEndOfStreamException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>
+            <value>
+            Gets an error code.
+            </value>                                    
+        </member>
+        <member name="P:Neurotec.NEndOfStreamException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the unmanaged
+            stack.
+            </value>                                                   
+        </member>
+        <member name="P:Neurotec.NEndOfStreamException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the managed
+            stack.
+            </value>                                                 
+        </member>
+        <member name="T:Neurotec.NExternalException">
+            <summary>
+            The base exception type for all COM interop exceptions and
+            structured exception handling exceptions.
+            </summary>                                                
+        </member>
+        <member name="M:Neurotec.NExternalException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the NExternalException class
+            with a specified error message and a call stack value.
+            </summary>
+            <param name="message">A string message that describes the
+                                  error.</param>
+            <param name="callStack">The call stack message.</param>   
+        </member>
+        <member name="M:Neurotec.NExternalException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NExternalException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>                                                  
+        </member>
+        <member name="P:Neurotec.NExternalException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>                                  
+        </member>
+        <member name="P:Neurotec.NExternalException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>                                                 
+        </member>
+        <member name="P:Neurotec.NExternalException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>                                               
+        </member>
+        <member name="M:Neurotec.NeurotecException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the SerializationInfo object with the parameter name and
+            additional exception information.
+            </summary>
+            <param name="info">The object that holds the serialized
+                               object data.</param>
+            <param name="context">The contextual information about the
+                                  source or destination.</param>
+            <remarks>
+            GetObjectData sets a SerializationInfo with all the exception
+            object data targeted for serialization. During
+            deserialization, the exception object is reconstituted from
+            the SerializationInfo transmitted over the stream.
+            </remarks>                                                   
+        </member>
+        <member name="P:Neurotec.NeurotecException.StackTrace">
+            <summary>
+            Gets a string representation of the frames on the call stack
+            at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the call stack.
+            </value>                                                    
+        </member>
+        <member name="P:Neurotec.NeurotecException.Code">
+            <summary>
+            Gets an error code of the current exception.
+            </summary>
+            <value>
+            Gets an error code.
+            </value>                                    
+        </member>
+        <member name="P:Neurotec.NeurotecException.UnmanagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the unmanaged
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describes the contents of the unmanaged
+            stack.
+            </value>                                                   
+        </member>
+        <member name="P:Neurotec.NeurotecException.ManagedStackTrace">
+            <summary>
+            Gets a string representation of the frames on the managed
+            stack at the time the current exception was thrown.
+            </summary>
+            <value>
+            Gets a string that describses the contents of the managed
+            stack.
+            </value>                                                 
+        </member>
+        <member name="T:Neurotec.NotRegisteredException">
+            <summary>
+            The exception that is thrown when one of Neurotechnology
+            libraries is nor registered.
+            </summary>                                              
+        </member>
+        <member name="M:Neurotec.NotRegisteredException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the NNotRegisteredException
+            class with a specified error message, a call stack message
+            and a reference to the inner exception that is the cause of
+            this exception.
+            </summary>
+            <param name="message">A string message that describes
+                                  the error.</param>
+            <param name="callStack">The call stack message.</param>
+            <param name="innerException">The exception that is the cause
+                                         of the current exception.</param>
+        </member>
+        <member name="T:Neurotec.Biometrics.NffvStatus">
+            <summary>
+            Enumerates fingerprint scanner status values.
+            </summary>                                   
+        </member>
+        <member name="F:Neurotec.Biometrics.NffvStatus.NoScanner">
+            Indicates that the fingerprint template was created.
+        </member>
+        <member name="F:Neurotec.Biometrics.NffvStatus.ScannerTimeout">
+            Indicates that there is no fingerprint scanner connected.
+        </member>
+        <member name="F:Neurotec.Biometrics.NffvStatus.UserCanceled">
+            Indicates that the fingerprint scanner has reached the
+            timeout.                                              
+        </member>
+        <member name="F:Neurotec.Biometrics.NffvStatus.QualityCheckFailed">
+            Indicates that a user has finished a fingerprint scanning.
+        </member>
+        <member name="T:Neurotec.Biometrics.Nffv">
+            <summary>
+            The main class of the Free Fingerprint Verification SDK.
+            Provides methods and properties for working with user
+            collection and enrolling or verifying user fingerprints.
+            </summary>                                              
+        </member>
+        <member name="F:Neurotec.Biometrics.Nffv.DllName">
+            <summary>
+            The name of a dynamic-linked library which contains unmanaged
+            functionality of the Free Fingerprint Verification SDK. 
+            </summary>                                                   
+        </member>
+        <member name="F:Neurotec.Biometrics.Nffv.MaxUserCount">
+            <summary>
+            The maximum number of users that can be enrolled to a
+            database.
+            </summary>                                           
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.GetAvailableScannerModules">
+            <summary>
+            \Returns available fingerprint scanner modules for usage in
+            the Free Fingerprint Verification SDK.
+            </summary>
+            <returns>
+            A string that contains the list of scanners separated by
+            semicolons. 
+            </returns>                                                 
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Nffv class. During the
+            initialization a new database is created or used previously
+            created.
+            </summary>
+            <param name="dbName">A name of database. This
+                                 database will be used to save
+                                 user fingerprints. The database
+                                 will be saved to a working
+                                 folder as a file.</param>
+            <param name="password">A database password. If you
+                                   don't want to protect a
+                                   database by password, use an
+                                   empty string as a password.</param>
+            <param name="scannerModules">A list of scanner modules that
+                                         should be loaded. It is a list
+                                         of fingerprint scanners that
+                                         you will use in your
+                                         application.</param>
+            <example>
+            This C# example code demonstrates how to create a new
+            instance of the Nffv calss.
+            <code lang="c#">
+            string dbName = "FingerprintsDatabase.dat";
+            string password = "passwd";
+            string scanners = "Upek;Futronic";
+            
+            Neurotec.Biometrics.Nffv engine = null;
+            
+            //Creates a new instance of the Nffv class
+            engine = new Neurotec.Biometrics.Nffv(dbName, password, scanners);
+            </code>
+            The same example code for VB.NET:
+            <code lang="vb.net">
+            Dim dbName As String = "FingerprintsDatabase.dat"
+            Dim password As String = "passwd"
+            Dim scanners As String = "Upek;Futronic"
+            
+            Dim engine As Global.Neurotec.Biometrics.Nffv = Nothing
+            
+            engine = New Global.Neurotec.Biometrics.Nffv(dbName, password, scanners)
+            </code>
+            </example>
+            <remarks>
+            For the list of available fingerprint scanners see a chapter
+            Supported Scanners.
+            </remarks>                                                              
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the Nffv class. During the
+            initialization a new database is created or used previously
+            created.
+            </summary>
+            <param name="dbName">A name of database. This database
+                                 will be used to save user
+                                 fingerprints. The database will be
+                                 saved to a working folder as a file.</param>
+            <param name="password">A database password. If you don't
+                                   want to protect a database by
+                                   password, use an empty string as a
+                                   password.</param>
+            <example>
+            This C# example code demonstrates how to create a new
+            instance of the Nffv calss.
+            <code lang="c#">
+            string dbName = "FingerprintsDatabase.dat";
+            string password = "passwd";
+            
+            Neurotec.Biometrics.Nffv engine = null;
+            
+            //Creates a new instance of the Nffv class
+            engine = new Neurotec.Biometrics.Nffv(dbName, password);
+            </code>
+            The same example code for VB.NET:
+            <code lang="vb.net">
+            Dim dbName As String = "FingerprintsDatabase.dat"
+            Dim password As String = "passwd"
+            
+            Dim engine As Global.Neurotec.Biometrics.Nffv = Nothing
+            
+            engine = New Global.Neurotec.Biometrics.Nffv(dbName, password)
+            </code>
+            </example>                                                       
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.GetUserById(System.Int32)">
+            <summary>
+            \Returns a user details by the Id from the UserCollection.
+            </summary>
+            <returns>
+            A reference to the NffvUser object that contains an
+            information about a user indicated by Id.
+            </returns>
+            <param name="id">User's identification number in a
+                             collection.</param>                      
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.Enroll(System.UInt32,Neurotec.Biometrics.NffvStatus@)">
+            <summary>
+            Gets a fingerprint from a scanner and saves it to a database.
+            </summary>
+            <param name="timeout">Specifies the time in milliseconds
+                                  after which the fingerprint scanner
+                                  stops scanning fingerprint. This
+                                  usually happens when a finger is
+                                  removed from a scanner for longer than
+                                  <i>timeout</i> milliseconds.</param>
+            <param name="status">The status of a fingerprint scanner
+                                 that indicates one of the value
+                                 enumerated in NffvStatus.</param>
+            <returns>
+            A reference to NffvUser object which provides methods for
+            managing enrolled users.
+            
+            If there were problem enrolling a fingerprint, the method
+            \returns a zero pointer.
+            </returns>
+            <example>
+            This C# example demonstrates the usage of the <i>Enroll</i>
+            method:
+            <code lang="c#">
+            //Field that holds a reference to Nffv object
+            Nffv engine;
+            
+            //Internal class that saves the result of fingerprint enrolment
+            \internal class EnrollmentResult
+            {
+                public NffvStatus engineStatus;
+                public NffvUser engineUser;
+            };
+            
+            //Method used for a fingerprint enrollment
+            public void doEnroll(object sender, DoWorkEventArgs args)
+            {
+                EnrollmentResult enrollmentResults = new EnrollmentResult();
+                enrollmentResults.engineUser = engine.Enroll(20000, out enrollmentResults.engineStatus);
+                args.Result = enrollmentResults;
+            }
+            </code>
+            
+            </example>                                                                                  
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.Verify(Neurotec.Biometrics.NffvUser,System.UInt32,Neurotec.Biometrics.NffvStatus@)">
+            <summary>
+            Compares a captured fingerprint with the one that was
+            enrolled to a database before in order to determine whether
+            two match.
+            </summary>
+            <param name="user">A reference to a database record that
+                               should be matched with the scanned
+                               fingerprint.</param>
+            <param name="timeout">Specifies the time in milliseconds
+                                  after which the fingerprint scanner
+                                  stops scanning fingerprint. This
+                                  usually happens when a finger is
+                                  removed from a scanner for longer than
+                                  <i>timeout</i> milliseconds.</param>
+            <param name="status">The status of a fingerprint scanner
+                                 that indicates one of the value
+                                 enumerated in NffvStatus.</param>
+            <returns>
+            This function returns a matching score.
+            </returns>
+            <example>
+            This C# sample code demonstrates how to verify two
+            fingerprints.
+            <code lang="c#">
+            Nffv engine;
+            
+            //An internal class that saves the verification result
+            \internal class VerificationResult
+            {
+                public NffvStatus engineStatus;
+                public int score;
+            };
+            
+            public void doVerify(object sender, DoWorkEventArgs args)
+            {
+                VerificationResult verificationResult = new VerificationResult();
+                verificationResult.score = engine.Verify((NffvUser)args.Argument, 20000, out verificationResult.engineStatus);
+                args.Result = verificationResult;
+            }
+            </code>
+            \Note that it isn't a complete code that can be used in your
+            application.
+            
+            For a complete code see the C# Sample application. 
+            </example>                                                                                                        
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.Cancel">
+            <summary>
+            Cancels a fingerprint enrollment or verification operation.
+            </summary>
+            <remarks>
+            This method is useful when the fingerprint enrollment or
+            verification operation take too long. In this case a message
+            box can be shown for a user to cancel this operation.
+            </remarks>
+            <example>
+            This C# code demonstrates how to cancel enrollment or
+            verification operation:
+            <code lang="c#">
+            Nffv engine;
+            
+            engine.Cancel();
+            </code>
+            The same code using VB.NET notation:
+            <code lang="vb.net">
+            Private engine As Nffv
+            
+            engine.Cancel()
+            </code>
+            </example>                                                  
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.Dispose">
+            <summary>
+            Disposes resources used by the Nffv.
+            </summary>                          
+        </member>
+        <member name="P:Neurotec.Biometrics.Nffv.QualityThreshold">
+            <summary>
+            Gets or sets image quality threshold.
+            </summary>
+            <value>
+            The fingerprint quality threshold. The value should be in
+            range [0, 255]. The default value is 100.
+            </value>                                                 
+        </member>
+        <member name="P:Neurotec.Biometrics.Nffv.MatchingThreshold">
+            <summary>
+            Gets or sets the minimum similarity value that verification
+            function accept for the same finger fingerprints.
+            </summary>
+            <value>
+            The minimum similarity value that verification function
+            accept for the same finger fingerprints. The default value is
+            0.01 %.
+            </value>                                                     
+        </member>
+        <member name="T:Neurotec.Biometrics.Nffv.UserCollection">
+            <summary>
+            This class represents a collection of NffvUsers objects that
+            represent the user fingerprints enrolled to a database.
+            </summary>
+            Note
+            \Note that this class is a sealed class, so it has a limited
+            extensibility (other classes cannot inherit from it).       
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.UserCollection.Add(System.IntPtr)">
+            <summary>
+            Adds a user to a UserCollection.
+            </summary>
+            <param name="hUser">A reference to an object that represents
+                                a user which should be added to a
+                                collection.</param>
+            <example>
+            To add a user to database you can use this C# code:
+            <code lang="c#">
+            public class UserEnrollment
+            {
+                UserDatabase _userDB;
+                _userDB.Add(new UserRecord(engineUser.Id, userName));
+            }
+            
+            public class UserRecord
+            {
+               //...
+               public UserRecord(int id, string name)
+               {
+                  _id = id;
+                  _name = name;
+               }
+            }
+            </code>
+            </example>                                                  
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.UserCollection.IndexOf(System.Int32)">
+            <summary>
+            \Returns an index of the UserCollection item specified by Id.
+            </summary>
+            <param name="id">The Id of a user to search in a collection.</param>
+            <returns>
+            A collection index of a user specified by Id.
+            </returns>                                                          
+        </member>
+        <member name="M:Neurotec.Biometrics.Nffv.UserCollection.Contains(System.Int32)">
+            <summary>
+            \Returns a Boolean value indicating whether a UserCollection
+            object contains an element with a specific key.
+            </summary>
+            <param name="id">An integer value that specifies the Id for
+                             which to search the element of the
+                             collection.</param>
+            <returns>
+            A Boolean value indicating whether the UserCollection
+            contains an elements with the specified Id.
+            
+            If the return value is True, the collection contains an
+            element with an Id specified. Otherwise, the return value is
+            False.
+            </returns>
+            <example>
+            This C# example demonstrates how to use this method:
+            <code lang="c#">
+            int id = 3;
+            
+            if UserCollection.Contains(id)
+               MsgBox("The desired user is in collection");
+            else
+               MsgBox("The desired user was not find in a collection");
+            </code>
+            The VB.NET code this method:
+            <code lang="vb.net">
+            Dim id As Integer = 3
+            
+            If UserCollection.Contains(id) Then
+                MsgBox("The desired user is in the collection.")
+            Else
+                MsgBox("The desired user was not find in the collection.")
+            End If
+            </code>
+            </example>                                                    
+        </member>
+        <member name="T:Neurotec.NCore">
+            <summary>
+            This class supports internal Neurotechnology libraries infrastructure and should not be used directly in your code.
+            </summary>
+        </member>
+        <member name="F:Neurotec.NCore.DllName">
+            <summary>
+            Dll's name. 
+            </summary>  
+        </member>
+        <member name="M:Neurotec.NCore.GetInfo">
+            <summary>
+            Retrieves an information about NCore library.
+            </summary>
+            <returns>NLibraryInfo object.</returns>
+        </member>
+        <member name="M:Neurotec.NCore.Free(System.IntPtr)">
+            <summary>
+            Frees a specified memory block.
+            </summary>
+            <param name="pBlock">A pointer to previously allocated
+                                 memory block to be freed.</param>
+            <remarks>
+            The Free method frees a memory block that was previously
+            allocated by a call to Alloc, CAlloc or ReAlloc methods. The
+            number of freed bytes is equivalent to the number of bytes
+            requested when the block was allocated (or reallocated, in
+            the case of ReAlloc). 
+            </remarks>                                                  
+        </member>
+    </members>
+</doc>

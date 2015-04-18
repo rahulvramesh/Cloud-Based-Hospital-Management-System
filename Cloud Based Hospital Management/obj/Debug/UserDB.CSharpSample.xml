@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UserRecord id="1" name="test" />
+  <UserRecord id="0" name="tes" />
+  <UserRecord id="1" name="rahul" />
+  <UserRecord id="2" name="Kooi" />
+</UserDatabase>
